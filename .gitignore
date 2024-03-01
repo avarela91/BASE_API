@@ -1,0 +1,16 @@
+.vs/
+.svn/
+obj/
+bin/
+packages/
+*.suo
+RecursosHumanos/Content/Files/Retiros/
+RecursosHumanos/Content/Files/Expedientes/
+RecursosHumanos/Content/Macro/Macro.txt
+RecursosHumanos/Web.config
+RecursosHumanos/Content/Files/LlamadosAtencion/
+RecursosHumanos/Content/Files/Preavisos/
+RecursosHumanos/Content/Files/Prestaciones/
+RecursosHumanos/Content/Files/Solicitudes/
+RecursosHumanos/Content/Files/Viaticos/
+RecursosHumanos/Content/Macro/

@@ -1,0 +1,13 @@
+diff a/ET/Objetos/PreliminaryRequest.cs b/ET/Objetos/PreliminaryRequest.cs	(rejected hunks)
+@@ -79,9 +79,9 @@
+         public string Requester { get; set; }
+         public string ReqName { get; set; }
+         public string Branch2 { get; set; }
+-        public Int16 Branch { get; set; }             // cambio
++        public Int64 Branch { get; set; }             // cambio
+         public string Department2 { get; set; }
+-        public Int16 Department { get; set; }           //cambio
++        public Int64 Department { get; set; }           //cambio
+     }
+ 
+     public class ContentPreliminaryModelET

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A952578-E95C-4918-837E-EDD1B67E118C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ET</RootNamespace>
+    <AssemblyName>ET</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Objetos\AnalisyPurchaseRequest.cs" />
+    <Compile Include="Objetos\Authentication\Module.cs" />
+    <Compile Include="Objetos\Authentication\User.cs" />
+    <Compile Include="Objetos\Authentication\Permiso.cs" />
+    <Compile Include="Objetos\ClasesRB\ModelItemsRB.cs" />
+    <Compile Include="Objetos\CodeBar.cs" />
+    <Compile Include="Objetos\ImportOfferData.cs" />
+    <Compile Include="Objetos\ItemReceivedOrder.cs" />
+    <Compile Include="Objetos\Items.cs" />
+    <Compile Include="Objetos\Item\Category.cs" />
+    <Compile Include="Objetos\Item\Department.cs" />
+    <Compile Include="Objetos\Item\Item.cs" />
+    <Compile Include="Objetos\OCRD.cs" />
+    <Compile Include="Objetos\OfferAnalysis.cs" />
+    <Compile Include="Objetos\OPOR.cs" />
+    <Compile Include="Objetos\Payments.cs" />
+    <Compile Include="Objetos\PreliminaryRequest.cs" />
+    <Compile Include="Objetos\PurcharseDelivery.cs" />
+    <Compile Include="Objetos\PurchaseInvoice.cs" />
+    <Compile Include="Objetos\PurchaseOrder.cs" />
+    <Compile Include="Objetos\PurchaseRequest.cs" />
+    <Compile Include="Objetos\ReceivedOrder.cs" />
+    <Compile Include="Objetos\Recursos Humanos\EmpleadosRRHH.cs" />
+    <Compile Include="Objetos\Requisas\Cuentas.cs" />
+    <Compile Include="Objetos\Requisas\LogEstadosRequisas.cs" />
+    <Compile Include="Objetos\Requisas\LogTrasladosItemsRequisas.cs" />
+    <Compile Include="Objetos\Requisas\OWHS.cs" />
+    <Compile Include="Objetos\Requisas\ReporteCorreo.cs" />
+    <Compile Include="Objetos\Requisas\Requisitions.cs" />
+    <Compile Include="Objetos\Requisas\SMTP.cs" />
+    <Compile Include="Objetos\Requisas\SolicitudCorreo.cs" />
+    <Compile Include="Objetos\ResponseData.cs" />
+    <Compile Include="Objetos\SaldoArticulosCompras.cs" />
+    <Compile Include="Objetos\UnitMea.cs" />
+    <Compile Include="Objetos\Vendor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sucursal.cs" />
+    <Compile Include="Utilidades\Validator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{cdd22ed2-3358-4585-b399-1a15d2c766a0}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
